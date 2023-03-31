@@ -1,0 +1,18 @@
+<mat-toolbar class="toolbarNav">
+  <button mat-flat-button routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
+    <mat-icon>home</mat-icon>
+    <span>dashboard</span>
+  </button>
+  <button mat-flat-button routerLink="/income" routerLinkActive="active-link">
+    <mat-icon>account_balance_wallet</mat-icon>
+    <span>Income</span>
+  </button>
+  <button mat-flat-button routerLink="/expense" routerLinkActive="active-link">
+    <mat-icon>local_activity</mat-icon>
+    <span>Expense</span>
+  </button>
+  <button mat-flat-button routerLink="/category" routerLinkActive="active-link">
+    <mat-icon>category</mat-icon>
+    <span>Category</span>
+  </button>
+</mat-toolbar>

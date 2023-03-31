@@ -1,0 +1,31 @@
+<div class="wrap">
+  <div class="container py-2">
+    <h2 class="text-white text-center mt-4">Create New Income</h2>
+    <div class="row mt-3 px-4">
+      <form>
+        <mat-form-field class="example-full-width">
+          <mat-label class="text-white">Amount</mat-label>
+          <input type="text" matInput placeholder="Enter Amount">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label class="text-white">Choose an option</mat-label>
+          <!-- <ng-select class="bg-white" [items]="Categories" bindLabel="description" bindValue="id">
+          </ng-select> -->
+          <mat-select name="countryString" class="{{false ? 'one' : 'two'}}"
+          placeholder="Country">
+            <mat-option [value]="'GB'">Great Britain</mat-option>
+            <mat-option [value]="'US'">United States</mat-option>
+            <mat-option [value]="'CA'">Canada</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <button mat-raised-button color="" class="add-btn mt-2"><mat-icon>add</mat-icon>Add</button>
+      </form>
+    </div>
+    <div class="row mt-5 px-4">
+      <mat-card  class="bg-dark">
+        <mat-card-content class="" style="color: #7b7b7b;">Recent Income List</mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
