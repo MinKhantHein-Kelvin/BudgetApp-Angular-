@@ -1,0 +1,43 @@
+<div class="modal-body">
+  <div class="wide-block mt-1">
+    <div class="row mt-3 px-4">
+      <form [formGroup]="expenseForm">
+        <mat-form-field class="d-block">
+          <mat-label>Amount</mat-label>
+          <input type="text" matInput placeholder="Enter Amount" [(ngModel)]="expenseObj.amount"
+            formControlName="amount">
+        </mat-form-field>
+
+        <mat-form-field class="d-block">
+          <mat-label class="text-white">Choose Category</mat-label>
+          <mat-select name="countryString" class="{{false ? 'one' : 'two'}}" placeholder="Country" formControlName="category" [(ngModel)]="expenseObj.category">
+            <mat-option *ngFor="let item of categoryList" [value]="item.description">{{item.description}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <!-- <mat-form-field class="example-full-width">
+          <mat-label class="text-white">Choose an option</mat-label>
+          <mat-select name="countryString" class="{{false ? 'one' : 'two'}}" placeholder="Country" formControlName="category" [(ngModel)]="expenseObj.category">
+            <mat-option *ngFor="let item of categoryList" [value]="item.description">{{item.description}}</mat-option>
+          </mat-select>
+        </mat-form-field> -->
+      </form>
+    </div>
+  </div>
+  <div class="section full">
+    <div class="wide-block mt-1">
+      <div class="row">
+        <div class="col-6 d-flex justify-content-end">
+          <button type="button" class="btn btn-danger" (click)="handleCancel()">
+            Cancel
+          </button>
+        </div>
+        <div class="col-6 d-flex justify-content-start">
+          <button type="button" class="btn btn-primary" (click)="handleSubmit()">
+            OK
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

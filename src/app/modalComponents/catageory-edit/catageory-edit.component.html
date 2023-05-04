@@ -1,0 +1,29 @@
+<div class="modal-body">
+  <div class="wide-block mt-1">
+    <div class="row mt-3 px-4">
+      <form [formGroup]="categoryForm">
+        <mat-form-field class="d-block">
+          <mat-label>Category Name</mat-label>
+          <input type="text" matInput placeholder="Enter Category Name" [(ngModel)]="categoryObj.description"
+            formControlName="categoryname">
+        </mat-form-field>
+      </form>
+    </div>
+  </div>
+  <div class="section full">
+    <div class="wide-block mt-1">
+      <div class="row">
+        <div class="col-6 d-flex justify-content-end">
+          <button type="button" class="btn btn-danger" (click)="handleCancel()">
+            Cancel
+          </button>
+        </div>
+        <div class="col-6 d-flex justify-content-start">
+          <button type="button" class="btn btn-primary" (click)="handleSubmit()">
+            OK
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

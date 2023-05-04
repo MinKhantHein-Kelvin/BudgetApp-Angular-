@@ -1,0 +1,21 @@
+::ng-deep {
+  .categoryEditClass {
+    margin-top: 11rem;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 60px);
+  }
+  .categoryEditClass > .modal-content{
+      border-radius: 15px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  ::ng-deep {
+    .categoryEditClass {
+      max-width: 350px;
+      margin-top: 11rem;
+    }
+  }
+
+}

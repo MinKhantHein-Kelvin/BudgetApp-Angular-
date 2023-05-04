@@ -12,6 +12,11 @@ import { CategoryComponent } from './category/category.component';
 import { MaterialModule } from './modules/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { HttpClientModule } from '@angular/common/http';
+import { CatageoryEditComponent } from './modalComponents/catageory-edit/catageory-edit.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { ExpenseEditComponent } from './modalComponents/expense-edit/expense-edit.component';
+import { IncomeEditComponent } from './modalComponents/income-edit/income-edit.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +25,10 @@ import { NgSelectModule } from '@ng-select/ng-select';
     ExpenseComponent,
     BudgetComponent,
     BottomNavComponent,
-    CategoryComponent
+    CategoryComponent,
+    CatageoryEditComponent,
+    ExpenseEditComponent,
+    IncomeEditComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +37,9 @@ import { NgSelectModule } from '@ng-select/ng-select';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    NgSelectModule
+    NgSelectModule,
+    HttpClientModule,
+    ModalModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

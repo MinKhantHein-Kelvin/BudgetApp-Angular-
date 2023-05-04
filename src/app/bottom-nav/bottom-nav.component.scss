@@ -23,3 +23,15 @@ button:hover,
 .active-link {
   color: whitesmoke;
 }
+
+@media screen and (min-width: 1024px) {
+  .nav-header {
+      margin: 0px 35% !important;
+      max-width: 30% !important;
+  }
+
+  .toolbarNav {
+    left: 35% !important;
+    max-width: 30% !important;
+  }
+}

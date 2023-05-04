@@ -1,18 +1,36 @@
 <div class="wrap">
-  <div class="container py-2">
+  <div class="container pt-2" style="padding-bottom: 90px;">
     <h2 class="text-white text-center mt-4">Create New Category</h2>
     <div class="row mt-3 px-4">
-      <form>
+      <form [formGroup]="categoryForm">
         <mat-form-field class="example-full-width">
           <mat-label class="text-white">Category Name</mat-label>
-          <input type="text" matInput placeholder="Enter Category Name">
+          <input type="text" matInput placeholder="Enter Category Name" [(ngModel)]="categoryObj.description" formControlName="categoryname">
         </mat-form-field>
-        <button mat-raised-button color="" class="add-btn mt-2"><mat-icon>add</mat-icon>Add</button>
+        <button mat-raised-button color="" class="add-btn mt-2" (click)="saveCategory()" [disabled]="!categoryForm.valid"><mat-icon>add</mat-icon>Add</button>
       </form>
     </div>
     <div class="row mt-5 px-4">
       <mat-card  class="bg-dark">
-        <mat-card-content class="" style="color: #7b7b7b;">Recent Category List</mat-card-content>
+        <mat-card-content class="fw-bold text-white">Recent Category List</mat-card-content>
+        <div class="row">
+          <div class="col-md-12">
+            <ng-container *ngFor="let item of categoryList; let i=index">
+              <!-- <div class="row"> -->
+                <div class="col-md-12 px-4 mt-3">
+                  <div class="row">
+                    <div class="col-6">
+                      <span class="text-white">{{item.description}}</span>
+                    </div>
+                    <div class="col-6 d-flex justify-content-center">
+                      <mat-icon class="ms-4 text-white" style="cursor: pointer;" (click)="editCategory(item)">edit</mat-icon>
+                      <mat-icon class="ms-4 text-white" style="cursor: pointer;" (click)="deleteCategory(item.id)">delete</mat-icon></div>
+                    </div>
+                  </div>
+              <!-- </div> -->
+            </ng-container>
+          </div>
+        </div>
       </mat-card>
     </div>
   </div>
