@@ -1,15 +1,18 @@
 <div class="wrap">
   <div class="container pt-2" style="padding-bottom: 90px;">
     <div class="row mt-3 px-4">
-      <!-- <form [formGroup]="categoryForm">
-        <mat-form-field class="example-full-width">
-          <mat-label class="text-white">Category Name</mat-label>
-          <input type="text" matInput placeholder="Enter Category Name" [(ngModel)]="categoryObj.description" formControlName="categoryname">
-        </mat-form-field>
-        <button mat-raised-button color="" class="add-btn mt-2" (click)="saveCategory()" [disabled]="!categoryForm.valid"><mat-icon>add</mat-icon>Add</button>
-      </form> -->
+      <mat-card  class="bg-dark">
+        <h2 class="text-white">Income</h2>
+        <canvas id="incomechart" width="400" height="150"></canvas>
+      </mat-card>
     </div>
-    <div class="row mt-5 px-4">
+    <div class="row mt-3 px-4">
+      <mat-card  class="bg-dark">
+        <h2 class="text-white">Expense</h2>
+        <canvas id="expensechart" width="400" height="150"></canvas>
+      </mat-card>
+    </div>
+    <div class="row mt-3 px-4">
       <mat-card  class="bg-dark">
         <div class="row text-white" >
           <div class="col-md-12">

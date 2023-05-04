@@ -17,6 +17,7 @@ import { CatageoryEditComponent } from './modalComponents/catageory-edit/catageo
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { ExpenseEditComponent } from './modalComponents/expense-edit/expense-edit.component';
 import { IncomeEditComponent } from './modalComponents/income-edit/income-edit.component';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { IncomeEditComponent } from './modalComponents/income-edit/income-edit.c
     NgSelectModule,
     HttpClientModule,
     ModalModule.forRoot(),
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
