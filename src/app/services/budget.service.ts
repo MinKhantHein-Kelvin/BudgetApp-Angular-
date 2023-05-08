@@ -8,7 +8,8 @@ import { IncomeList } from '../models/IncomeList';
   providedIn: 'root'
 })
 export class BudgetService {
-  private baseUrl = 'http://localhost:3001'
+  // private baseUrl = 'http://localhost:3001'
+  private baseUrl = 'https://giant-pink-goat.cyclic.app'
 
   constructor(private http : HttpClient) { }
 
